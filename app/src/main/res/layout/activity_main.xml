@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F6B5"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="147dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/temperature" />
+
+    <TextView
+        android:id="@+id/tvtemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Temperature Calculator"
+        android:textColor="#F43D2F"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/ettemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="#F4E55D"
+        android:ems="10"
+        android:hint="Enter in Celsius"
+        android:inputType="textPersonName"
+        android:textColor="#1B0202"
+        app:layout_constraintEnd_toEndOf="@+id/tvtemp"
+        app:layout_constraintStart_toStartOf="@+id/tvtemp"
+        app:layout_constraintTop_toBottomOf="@+id/tvtemp" />
+
+    <Button
+        android:id="@+id/btnconvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Convert"
+        android:textColor="#F44336"
+        android:textColorHighlight="#F4C22A"
+        android:textColorHint="#F4C22A"
+        android:textColorLink="#F4C22A"
+        android:textSize="16sp"
+        app:backgroundTint="#F4C22A"
+        app:layout_constraintEnd_toEndOf="@+id/ettemp"
+        app:layout_constraintStart_toStartOf="@+id/ettemp"
+        app:layout_constraintTop_toBottomOf="@+id/ettemp" />
+
+    <TextView
+        android:id="@+id/tvshow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="#F4E55D"
+        android:textColor="#1C0101"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/ettemp"
+        app:layout_constraintStart_toStartOf="@+id/ettemp"
+        app:layout_constraintTop_toBottomOf="@+id/btnconvert" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Enter Temperature in celsius"
+        android:textColor="#F44336"
+        app:layout_constraintStart_toStartOf="@+id/ettemp"
+        app:layout_constraintTop_toBottomOf="@+id/tvtemp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Temperature in fahrenheit"
+        android:textColor="#F44336"
+        app:layout_constraintStart_toStartOf="@+id/tvshow"
+        app:layout_constraintTop_toBottomOf="@+id/btnconvert" />
+</androidx.constraintlayout.widget.ConstraintLayout>
